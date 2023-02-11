@@ -26,6 +26,10 @@ const userSchema=new mongoose.Schema({
     role:{
         type:String,
         default:"user"
+    },
+    location:{
+        type:String,
+        required:true
     }
 })
 userSchema.methods.getJWTtoken=function(){

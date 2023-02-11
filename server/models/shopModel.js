@@ -24,12 +24,23 @@ const shopSchema=new mongoose.Schema({
         },
         Stock:{
             type:Number
+        },
+        image:{
+            type:String
         }
       
     }],
     category:{
         type:String,
         required:true
+    },
+    Image:{
+        type:String
+
+    },
+    location:{
+        type:String,
+  
     }
 })
 module.exports=mongoose.model("Shop",shopSchema);

@@ -1,21 +1,35 @@
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const Shop=require("../models/shopModel");
 const ErrorHandler = require("../utils/errorHandler");
+const cloudinary=require('cloudinary').v2;
+cloudinary.config({
+    cloud_name:"dlgp2ufmn",
+    api_key:"738354633193825",
+    api_secret:"SzqyhWymF0CoH2bbDut25UzhTPQ"
+})
 exports.createShop=catchAsyncErrors(async(req,res,next)=>
 {
+    const file=req.files.photo;
+   
+    cloudinary.uploader.upload(file.tempFilePath,async(err,result)=>{
+        const{name,category}=req.body;
+        const shop=await Shop.create(
+         {
+             name:name,
+             category:category,
+             user:req.user._id,
+             location:req.user.location,
+             Image:result.url
+         }
+        )
+        res.status(200).json({
+         success:true,
+         shop
+        })
+        
+    })
 
-   const{name,category}=req.body;
-   const shop=await Shop.create(
-    {
-        name:name,
-        category:category,
-        user:req.user._id
-    }
-   )
-   res.status(200).json({
-    success:true,
-    shop
-   })
+
 })
 exports.createItems=catchAsyncErrors(async(req,res,next)=>
 {
@@ -46,7 +60,7 @@ exports.items=catchAsyncErrors(async(req,res,next)=>{
         items
     })
 })
-exports.shops=catchAsyncErrors(async(req,res,next)=>{
+exports.userShops=catchAsyncErrors(async(req,res,next)=>{
     console.log(req.user._id);
     const shops=await Shop.find({user:req.user._id.toString()});
     if(!shops)
@@ -77,4 +91,16 @@ exports.deleteItem=catchAsyncErrors(async(req,res,next)=>{
 
 
 
+})
+
+exports.shops=catchAsyncErrors(async(req,res,next)=>{
+    const shops= await Shop.find();
+    if(!shops)
+    {
+        return next(new ErrorHandler("Shop Not Found",404))
+    } 
+    res.status(200).json({
+        success:true,
+        shops
+    })
 })
