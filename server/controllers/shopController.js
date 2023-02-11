@@ -1,6 +1,7 @@
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const Shop=require("../models/shopModel");
 const ErrorHandler = require("../utils/errorHandler");
+const ApiFeatures=require("../utils/apiFeatures");
 const cloudinary=require('cloudinary').v2;
 cloudinary.config({
     cloud_name:"dlgp2ufmn",
@@ -94,7 +95,9 @@ exports.deleteItem=catchAsyncErrors(async(req,res,next)=>{
 })
 
 exports.shops=catchAsyncErrors(async(req,res,next)=>{
-    const shops= await Shop.find();
+    const apiFeature=new ApiFeatures(Shop.find(),req.query).search().filter();
+    const shops= await apiFeature.query;
+    console.log(shops);
     if(!shops)
     {
         return next(new ErrorHandler("Shop Not Found",404))
