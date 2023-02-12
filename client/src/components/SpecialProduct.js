@@ -10,6 +10,7 @@ const SpecialProduct = () => {
   //   location:"Delhi"
   // }
   const{keyword}=useParams();
+  const{location}=useParams();
   const dispatch=useDispatch();
   const{shops,loading,error}=useSelector(state=>state.shops);
   useEffect(()=>

@@ -10,12 +10,17 @@ import help from "../images/5.help.png";
 import  location from "../images/9.location.png";
 const Header = () => {
   const[keyword,setKeyword]=useState("");
+
+
   const filter=()=>
   {
     if(keyword.trim())
     {
       window.location.href=`/shops/${keyword}`
     }
+
+ 
+
     else{
       window.location.href="/shops"
     }
@@ -104,9 +109,9 @@ const Header = () => {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/openStore">Open Store</NavLink>
                     <div className="input-group form-Container">
-                <input type="text" placeholder="Search by location" class="form-control"/>
+                <input type="text" placeholder="Search by location" class="form-control" />
                 <span className="input-group-btn">
-                   <button className="btn btn-search">
+                   <button className="btn btn-search" >
                       <img src={location} width="40"/>
                    </button>
                 </span>
