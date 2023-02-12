@@ -16,11 +16,11 @@ const createStore = () => {
             <div className="auth-card">
               <h3 className="text-center mb-3">Create Store</h3>
               <form action="" className="d-flex flex-column gap-15">
-                <CustomInput type="text" name="name" placeholder="Name" />
-                <CustomInput type="email" name="email" placeholder="Email" />
-                <CustomInput type="text" name="shop name" placeholder="Shop Name"/>
-                <CustomInput type="location" name="location" placeholder="Location"/>
-                <CustomInput type="password" name="password" placeholder="Password"/>
+                
+                <CustomInput type="text" name="name" placeholder="Shop Name" />
+                <CustomInput type="text" name="category" placeholder="Category" />
+                <CustomInput type="file" name="Image" placeholder="Image"/>
+                
                 <div>
                   <div className="mt-3 d-flex justify-content-center gap-15 align-items-center">
                     <button className="button border-0">Submit</button>
