@@ -3,6 +3,59 @@
   padding: 0;
   box-sizing: border-box;
 }
+.profileContainer{
+  margin:30px;
+ 
+}
+.profileContainer Button{
+  margin:15px;
+  
+}
+.profilePic {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* padding: 10px; */
+}
+.profileContainer {
+  display: flex;
+  margin: 90px;
+}
+@media only screen and (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column-reverse;
+  }
+}
+.Shops{
+  justify-content: center;
+  align-items: center;
+  height:500px;
+  text-align: center;
+  cursor:pointer;
+  /* width:20%; */
+}
+
+.Card{
+  cursor:pointer;
+  
+}
+.CardMedia{
+  width:20%;
+}
+.items{
+  /* margin-top: 12px; */
+  align-items: center;
+  /* display: flex; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  
+  padding: 10px;
+}
+.form-label{
+  margin-top:15px;
+}
 :root {
   --color-131921: #131921;
   --color-3b4149: #3b4149;
