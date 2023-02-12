@@ -3,9 +3,11 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
+import {CardActions} from '@mui/material';
+import {Link } from "react-router-dom";
 import {Row,Col,Form ,Button} from 'react-bootstrap';
 import ProductCard from './ProductCard';
-import bangle from "../images/bangless.jpg"
+import bangle from "../images/lehengaa.jpg"
 import Typography from '@mui/material/Typography';
 const UserProfile=()=>{
     return(
@@ -57,9 +59,14 @@ const UserProfile=()=>{
             
             image={bangle}/>
             <CardContent>
-            <Typography variant="body2" color="text.secondary">
-          View More
-        </Typography>
+            <CardActions>
+            <Button size="small" color="white">
+                
+          <Link to="/item" color='white'>
+          Add Item
+          </Link> </Button>
+        
+      </CardActions>
             </CardContent>
          </Card>
          
