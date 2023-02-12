@@ -6,6 +6,7 @@ import wishlist from "../images/wishlist.svg";
 import user from "../images/user.svg";
 import cart from "../images/cart.svg";
 import menu from "../images/menu.svg";
+import search from "../images/1.search.png";
 const Header = () => {
   return (
     <>
@@ -37,7 +38,15 @@ const Header = () => {
               </h2>
             </div>
             <div className="col-5">
-                  <div className="dropdown">
+              <div className="input-group form-Container">
+                <input type="text" placeholder="Search" class="form-control"/>
+                <span className="input-group-btn">
+                   <button className="btn btn-search">
+                      <img src={search} width="40"/>
+                   </button>
+                </span>
+              </div>
+                  {/*<div className="dropdown">
                     <button
                       className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center"
                       type="button"
@@ -70,7 +79,7 @@ const Header = () => {
                         </Link>
                       </li>
                     </ul>
-                  </div>
+                  </div>*/}
                 </div>
             {/* <div className="col-5">
               <div className="input-group">
