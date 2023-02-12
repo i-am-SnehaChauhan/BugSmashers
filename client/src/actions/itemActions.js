@@ -7,7 +7,7 @@ export const getItems=(id)=> async(dispatch)=>{
             type:ALL_ITEM_REQUEST
         })
         const {data}=await axios.get(`/api/v1/items/${id}`);
-        console.log(data);
+        console.log("got"+data);
 
         dispatch({
             type:ALL_ITEM_SUCCESS,

@@ -51,7 +51,7 @@ function App() {
             <Route path="checkout" element={<Checkout />} />
             
             <Route path="wishlist" element={<Wishlist />} />
-            <Route path="login" element={<Login />} />
+            <Route path="login" element={<SubLogin />} />
             <Route path="forgot-password" element={<Forgotpassword />} />
             <Route path="signup" element={<Signup />} />
             <Route path="reset-password" element={<Resetpassword />} />
