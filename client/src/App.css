@@ -270,6 +270,9 @@ footer .input-group-text {
 .product-card:hover .action-bar {
   right: 15px;
 }
+.product-details{
+    margin-left: 9rem;
+}
 .product-card .product-details h6 {
   color: var(--color-bf4800);
   font-size: 13px;
@@ -789,4 +792,16 @@ footer .input-group-text {
 .SignPage{
     background-color: #d7a9eb;
     height:100vh;
+}
+.chat{
+    width:60px;
+    height:60px;
+    color:white;
+    background-color: green;
+    margin-right:10px;
+    border-radius:50%;
+    padding:10px;
+    position: absolute;
+    right:0;
+
 }

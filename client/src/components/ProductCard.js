@@ -77,7 +77,7 @@ items.map(item=>(
             <ReactStars
               count={5}
               size={24}
-              value={4}
+              value={2.5}
               edit={false}
               activeColor="#ffd700"
             />
