@@ -11,13 +11,14 @@ import gr from "../images/gr.svg"
 import gr2 from "../images/gr2.svg"
 import gr3 from "../images/gr3.svg"
 import gr4 from "../images/gr4.svg"
+import {Link} from "react-router-dom";
 
 const ExploreProducts = () => {
   const [grid, setGrid] = useState(4);
   return (
     <>
       <Meta title={"Our Store"} />
-      <BreadCrumb title="Our Store" />
+      {/* <BreadCrumb title="Our Store" />
       <Container class1="store-wrapper home-wrapper-2 py-5">
         <div className="row">
           <div className="col-3">
@@ -134,7 +135,7 @@ const ExploreProducts = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div className="filter-card mb-3">
               <h3 className="filter-title">Random Product</h3>
               <div>
@@ -187,7 +188,7 @@ const ExploreProducts = () => {
                 </div>
               </div>
             </div> */}
-          </div>
+          {/* </div>
           <div className="col-9">
             <div className="filter-sort-grid mb-4">
               <div className="d-flex justify-content-between align-items-center">
@@ -253,14 +254,18 @@ const ExploreProducts = () => {
                 </div>
               </div>
             </div>
-            <div className="products-list pb-5">
+            <div className="products-list pb-5"> */}
               <div className="d-flex gap-10 flex-wrap">
                 <ProductCard grid={grid} />
               </div>
-            </div>
+            {/* </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
+      <div className="chat">
+       
+       <Link to="/chatScreen" className="chatHead">Chat</Link> </div>
+ 
     </>
   );
 };

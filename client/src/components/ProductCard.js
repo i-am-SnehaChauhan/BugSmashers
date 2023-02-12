@@ -37,7 +37,10 @@ const ProductCard = (props) => {
   useEffect(()=>{
     dispatch(getItems(id))
   },[dispatch,id])
-
+function Buy()
+{
+  window.location.href="/payment";
+}
   return (
     <>
       
@@ -77,7 +80,7 @@ items.map(item=>(
             <ReactStars
               count={5}
               size={24}
-              value={4}
+              value={2.5}
               edit={false}
               activeColor="#ffd700"
             />
@@ -89,6 +92,7 @@ items.map(item=>(
             
             </p>
             <p className="price">Rs{item.price}</p>
+            <button className="buyButton button" onClick={Buy}>Buy</button>
           </div>
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">
