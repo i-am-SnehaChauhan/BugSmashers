@@ -152,7 +152,7 @@ const SpecialProduct = () => {
           <div className="special-product-card">
           <div className="d-flex justify-content-between">
             <div className="prod-image">
-              <img src="https://c.ndtvimg.com/2019-05/j82aj5m_vegan-baking_650x400_20_May_19.jpg" className="img-fluid" alt="watch" />
+              <img src={shop.Image}className="img-fluid" alt="watch" />
             </div>
             <div className="special-product-content">
               <h5 className="brand"></h5>
@@ -172,7 +172,7 @@ const SpecialProduct = () => {
               </div>
               <div className="prod-count my-3">
                 <p>{shop.category}</p>
-                {/* <p>{shop.location}</p> */}
+               <p>{shop.location}</p>
                 {/* <div className="progress">
                   <div
                     className="progress-bar"

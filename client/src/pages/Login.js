@@ -13,7 +13,7 @@ const Login = () => {
   const{isAuthenticated,loading,error,user}=useSelector(state=>state.user)
   const dispatch=useDispatch();
   const loginSubmit=()=>
-  {console.log("hey");
+  {window.location.href="/";
     dispatch(login(email,password))
   }
 useEffect(()=>
@@ -29,9 +29,9 @@ useEffect(()=>
     
     <>
       <Meta title={"Login"} />
-      <BreadCrumb title="Login" />
-
-      <Container class1="login-wrapper py-5 home-wrapper-2">
+    
+<div className="loginPage">
+      <Container className="login-wrapper py-5 home-wrapper-2 borderclass">
         <div className="row">
           <div className="col-12">
             <div className="auth-card">
@@ -49,7 +49,9 @@ useEffect(()=>
                   <Link to="/forgot-password">Forgot Password?</Link>
 
                   <div className="mt-3 d-flex justify-content-center gap-15 align-items-center">
-                    <input type="submit" name="login"></input>
+                  <Link to="/" className="button signup">
+                     Login
+                    </Link>
                     <Link to="/signup" className="button signup">
                       SignUp
                     </Link>
@@ -60,6 +62,7 @@ useEffect(()=>
           </div>
         </div>
       </Container>
+      </div>
     </>
   );
 };

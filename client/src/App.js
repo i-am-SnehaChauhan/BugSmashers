@@ -27,14 +27,16 @@ import TermAndCondition from "./pages/TermAndCondition";
 import SingleProduct from "./pages/SingleProduct";
 import Checkout from "./pages/Checkout";
 import openStore from "./pages/OpenStore";
-import SubLogin from "./pages/SubLogin";
+import SubLogin from "./SubLogin";
 import SpecialProduct from "./components/SpecialProduct";
-
+import Landing from "./pages/Landing";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+        <Route path="/home" index element={<Landing/>}/>
+        <Route path="/login" element={<Login />} />
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home/>}/>
             <Route path="about" element={<About/>}/>
@@ -51,7 +53,7 @@ function App() {
             <Route path="checkout" element={<Checkout />} />
             
             <Route path="wishlist" element={<Wishlist />} />
-            <Route path="login" element={<SubLogin />} />
+           
             <Route path="forgot-password" element={<Forgotpassword />} />
             <Route path="signup" element={<Signup />} />
             <Route path="reset-password" element={<Resetpassword />} />

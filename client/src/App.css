@@ -253,7 +253,9 @@ footer .input-group-text {
 }
 
 /* Special Product ends here */
-
+.special-product-content{
+    margin-right:5rem;
+}
 /* famous card */
 
 .famous-card .famous-content {
@@ -464,6 +466,7 @@ footer .input-group-text {
   width: 500px;
   margin: 30px auto;
   border-radius: 10px;
+  margin-top: 200px;
 }
 .auth-card h3 {
   font-size: 19px;
@@ -679,3 +682,45 @@ footer .input-group-text {
   top: 0;
 }
 /* Open Store Page ends here*/
+.imageShop{
+    height:15rem;
+    width:15rem;
+}
+.Landing{
+    height:100vh;
+    background: url("./images/landing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.headingLanding{
+    font-size: 2rem;
+    color:white;
+    margin-left: 50rem;
+    margin-right: 10rem;
+    padding-top:10rem;
+    line-height: 50px;
+
+}
+.landingButton{
+    background-color: black;
+    width:300px;
+    margin-left: 55%;
+    margin-right:10%;
+    color:white;
+    border-radius:30px;
+    height:40px;
+    margin-top:4rem;
+}
+.landingLink{
+    color:white;
+    padding-left:50px;
+    font-size: 1.5rem;
+}
+.borderclass{
+   margin-top: 50%;
+}
+.loginPage{
+    height:100vh;
+    background-color: #d7a9eb;
+}

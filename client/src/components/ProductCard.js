@@ -62,7 +62,7 @@ items.map(item=>(
         >
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
-              <img src={lehengaa} alt="wishlist" />
+              <img src={item.image} alt="wishlist" className="imageShop" />
             </button>
           </div>
           <div className="product-image">
@@ -71,7 +71,8 @@ items.map(item=>(
           <div className="product-details">
             <h6 className="brand">{item.name}</h6>
             <h5 className="product-title">
-              A beautiful lavender lehenga with embroidary 
+           Availablity= {item.availability}<br></br>
+           Stock={item.Stock}
             </h5>
             <ReactStars
               count={5}
@@ -81,10 +82,11 @@ items.map(item=>(
               activeColor="#ffd700"
             />
             <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
               blanditiis praesentium voluptatum deleniti atque corrupti quos
               dolores et quas molestias excepturi sint occaecati cupiditate non
               provident, similique sunt...
+            
             </p>
             <p className="price">Rs{item.price}</p>
           </div>
