@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact"
 import ExploreProducts from "./pages/ExploreProducts";
 import OpenStore from "./pages/OpenStore";
-
+import CreateItem from "./pages/CreateItem";
 
 
 // import SingleBlog from "./pages/SingleBlog";
@@ -58,7 +58,7 @@ function App() {
             <Route path="blogs" element={<Blog />} />
             <Route path="blog/:id" element={<SingleBlog />} />
            
-           
+           <Route path="item"element={<CreateItem/>}></Route>
             
             <Route path="checkout" element={<Checkout />} />
             
