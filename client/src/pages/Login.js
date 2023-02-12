@@ -34,7 +34,7 @@ useEffect(()=>
       <Container className="login-wrapper py-5 home-wrapper-2 borderclass">
         <div className="row">
           <div className="col-12">
-            <div className="auth-card">
+            <div className="auth-card1">
               <h3 className="text-center mb-3">Login</h3>
               <form action="" className="d-flex flex-column gap-15" onSubmit={loginSubmit}>
                 <CustomInput type="email" name="email" placeholder="Email" value={email} onChange={(e)=>setLoginEmail(e.target.value)} />

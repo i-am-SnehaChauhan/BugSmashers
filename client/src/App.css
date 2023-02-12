@@ -461,13 +461,21 @@ footer .input-group-text {
 
 /*  auth card */
 
-.auth-card {
+.auth-card1 {
   padding: 20px;
   background-color: white;
   width: 500px;
   margin: 30px auto;
   border-radius: 10px;
   margin-top: 200px;
+}
+.auth-card{
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 10px;
+
 }
 .auth-card h3 {
   font-size: 19px;
@@ -724,4 +732,8 @@ footer .input-group-text {
 .loginPage{
     height:100vh;
     background-color: #d7a9eb;
+}
+.SignPage{
+    background-color: #d7a9eb;
+    height:100vh;
 }

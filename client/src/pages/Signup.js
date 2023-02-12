@@ -8,11 +8,11 @@ const Signup = () => {
   return (
     <>
       <Meta title={"Sign Up"} />
-      <BreadCrumb title="Sign Up" />
+  <div class="SignPage">
       <Container class1="login-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <div className="auth-card">
+            <div className="auth-card1">
               <h3 className="text-center mb-3">Sign Up</h3>
               <form action="" className="d-flex flex-column gap-15">
                 <CustomInput type="text" name="name" placeholder="Name" />
@@ -30,6 +30,7 @@ const Signup = () => {
           </div>
         </div>
       </Container>
+      </div>
     </>
   );
 };
