@@ -7,6 +7,7 @@ import user from "../images/8.account.png";
 import search from "../images/1.search.png";
 import Login from "../images/6.log-in.png";
 import help from "../images/5.help.png";
+import  location from "../images/9.location.png";
 const Header = () => {
   const[keyword,setKeyword]=useState("");
   const filter=()=>
@@ -102,7 +103,14 @@ const Header = () => {
                   <div className="d-flex align-items-center gap-50 text-dark">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/openStore">Open Store</NavLink>
-                    <NavLink to="/product">Explore Products</NavLink>
+                    <div className="input-group form-Container">
+                <input type="text" placeholder="Search by location" class="form-control"/>
+                <span className="input-group-btn">
+                   <button className="btn btn-search">
+                      <img src={location} width="40"/>
+                   </button>
+                </span>
+              </div>
                     <NavLink to="/blogs">Our stories</NavLink>
                     <NavLink to="/contact">Contact</NavLink>
                   </div>
