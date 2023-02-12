@@ -29,6 +29,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import openStore from "./pages/OpenStore";
 import SubLogin from "./pages/SubLogin";
+import CreateStore from "./pages/CreateStore";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="forgot-password" element={<Forgotpassword />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="createStore" element={<CreateStore/>} />
             <Route path="reset-password" element={<Resetpassword />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="refund-policy" element={<RefundPolicy />} />
