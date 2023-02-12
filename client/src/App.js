@@ -16,6 +16,7 @@ import OpenStore from "./pages/OpenStore";
 
 import Wishlist from "./pages/Wishlist";
 import Login from "./pages/Login";
+import UserProfile from "./components/UserProfile"
 import Forgotpassword from "./pages/Forgotpassword";
 import Signup from "./pages/Signup";
 import Resetpassword from "./pages/Resetpassword";
@@ -47,6 +48,9 @@ function App() {
             <Route path="product/:id" element={<SingleProduct />} />
             {/* <Route path="blogs" element={<Blog />} /> */}
             <Route path="blog/:id" element={<SingleBlog />} />
+           
+           
+            
             <Route path="checkout" element={<Checkout />} />
             
             <Route path="wishlist" element={<Wishlist />} />
@@ -55,6 +59,7 @@ function App() {
             <Route path="signup" element={<Signup />} />
             <Route path="createStore" element={<CreateStore/>} />
             <Route path="reset-password" element={<Resetpassword />} />
+            <Route path="account" element={<UserProfile/>} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="refund-policy" element={<RefundPolicy />} />
             <Route path="shipping-policy" element={<ShippingPolicy />} />
