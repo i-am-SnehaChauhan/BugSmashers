@@ -27,7 +27,7 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import TermAndCondition from "./pages/TermAndCondition";
 import SingleProduct from "./pages/SingleProduct";
 import Checkout from "./pages/Checkout";
-
+import Blog from "./pages/Blogs"
 import SpecialProduct from "./components/SpecialProduct";
 import Landing from "./pages/Landing";
 
@@ -52,7 +52,7 @@ function App() {
 
             <Route path="items/:id" element={<ExploreProducts />} />
             <Route path="product/:id" element={<SingleProduct />} />
-            {/* <Route path="blogs" element={<Blog />} /> */}
+            <Route path="blogs" element={<Blog />} />
             <Route path="blog/:id" element={<SingleBlog />} />
            
            
