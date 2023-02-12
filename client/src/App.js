@@ -29,6 +29,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import openStore from "./pages/OpenStore";
 import SubLogin from "./pages/SubLogin";
+import SpecialProduct from "./components/SpecialProduct";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home/>}/>
             <Route path="about" element={<About/>}/>
+            <Route path="/shops/:keyword" element={<SpecialProduct/>}/>
 
             <Route path="contact" element={<Contact/>}/>
             <Route path="openStore" element={<OpenStore/>}/>

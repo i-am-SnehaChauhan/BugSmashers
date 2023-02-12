@@ -7,7 +7,7 @@ function SubLogin()
 {
     const[email,setLoginEmail]=useState("");
     const [password,setLoginPassword]=useState("");
-const{user,error,isAuthenticated}=useSelector(state=>state.user)
+    const{user,error,isAuthenticated}=useSelector(state=>state.user)
     const dispatch=useDispatch();
     const loginSubmit=()=>{
         dispatch(login(email,password))
@@ -20,12 +20,12 @@ const{user,error,isAuthenticated}=useSelector(state=>state.user)
         window.location.href="/me"
        }
 
-    },[dispatch])
+    },[isAuthenticated])
 return (
-    <form onSubmit={loginSubmit}>
-        <input type="text" name="email" value={email} onChange={(e)=>setLoginEmail(e.target.value)}/>
-        <input type="password" name="password" value={password} onChange={(e)=>setLoginPassword(e.target.value)}/>
-        <input type="submit" name="submit"/>
+    <form >
+        <input type="text" name="name" placeholder="Enter Your Name" onChange={(e)=>setLoginEmail(e.target.value)}/>
+        <input type="password" name="password" placeholder="Enter Password" onChange={(e)=>setLoginPassword(e.target.value)}/>
+        <input type="submit" name="submit" onClick={loginSubmit}/>
     </form>
 )
 }

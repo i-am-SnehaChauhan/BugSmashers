@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ReactStars from "react-rating-stars-component";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getShop } from "../actions/shopActions";
 const SpecialProduct = () => {
   // const product={
@@ -9,12 +9,13 @@ const SpecialProduct = () => {
   //   category:"Clothes",
   //   location:"Delhi"
   // }
+  const{keyword}=useParams();
   const dispatch=useDispatch();
   const{shops,loading,error}=useSelector(state=>state.shops);
   useEffect(()=>
   {
   
-    dispatch(getShop())
+    dispatch(getShop(keyword))
   },[dispatch])
   return (
    

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import compare from "../images/compare.svg";
@@ -8,6 +8,18 @@ import cart from "../images/cart.svg";
 import menu from "../images/menu.svg";
 import search from "../images/1.search.png";
 const Header = () => {
+  const[keyword,setKeyword]=useState("");
+  const filter=()=>
+  {
+    if(keyword.trim())
+    {
+      window.location.href=`/shops/${keyword}`
+    }
+    else{
+      window.location.href="/shops"
+    }
+
+  }
   return (
     <>
       {/* <header className="header-top-strip py-3">
@@ -39,9 +51,9 @@ const Header = () => {
             </div>
             <div className="col-5">
               <div className="input-group form-Container">
-                <input type="text" placeholder="Search" class="form-control"/>
+                <input type="text" placeholder="Search" class="form-control" onChange={(e)=>setKeyword(e.target.value)}/>
                 <span className="input-group-btn">
-                   <button className="btn btn-search">
+                   <button className="btn btn-search" onClick={filter}>
                       <img src={search} width="40"/>
                    </button>
                 </span>
