@@ -50,7 +50,7 @@ exports.createItems=catchAsyncErrors(async(req,res,next)=>
 
 })
 exports.items=catchAsyncErrors(async(req,res,next)=>{
-    const shop=await Shop.findById(req.query.shopId);
+    const shop=await Shop.findById(req.params.id);
     if(!shop)
     {
         return next(new ErrorHandler("Shop Not Found",404))
@@ -95,6 +95,7 @@ exports.deleteItem=catchAsyncErrors(async(req,res,next)=>{
 })
 
 exports.shops=catchAsyncErrors(async(req,res,next)=>{
+   
     const apiFeature=new ApiFeatures(Shop.find(),req.query).search().filter();
     const shops= await apiFeature.query;
     console.log(shops);

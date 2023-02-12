@@ -28,6 +28,7 @@ import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import openStore from "./pages/OpenStore";
+import SubLogin from "./pages/SubLogin";
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
             <Route path="openStore" element={<OpenStore/>}/>
 
 
-            <Route path="product" element={<ExploreProducts />} />
+            <Route path="items/:id" element={<ExploreProducts />} />
             <Route path="product/:id" element={<SingleProduct />} />
             {/* <Route path="blogs" element={<Blog />} /> */}
             <Route path="blog/:id" element={<SingleBlog />} />

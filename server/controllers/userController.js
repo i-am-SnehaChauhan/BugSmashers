@@ -17,6 +17,7 @@ exports.createUser=catchAsyncErrors(async(req,res,next)=>{
 exports.login=catchAsyncErrors(async(req,res,next)=>{
     const{email,password}=req.body;
    const user= await User.findOne({email:email});
+   console.log(user);
    if(!user)
    {
     return next(new ErrorHandler("User Not Found",404))

@@ -1,0 +1,4 @@
+export const ALL_SHOP_REQUEST = "ALL_SHOP_REQUEST";
+export const ALL_SHOP_SUCCESS = "ALL_SHOP_SUCCESS";
+export const ALL_SHOP_FAIL = "ALL_SHOP_FAIL";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";

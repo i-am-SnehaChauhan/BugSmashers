@@ -8,7 +8,7 @@ import Container from "../components/Container";
 const Home = () => {
   return (
     <>
-    <div className="slider">
+    {/* <div className="slider">
      <ImageSlider effectDelay={500} autoPlayDelay={2000}>
       <Slide>
         <img alt="img2" src=" https://www.resizepixel.com/Image/ck50fi3vd2/Preview/Screenshot_20230211_065344.png?v=b51ac316-cc1e-4618-bac5-8c8c4dc570f6" />
@@ -20,7 +20,7 @@ const Home = () => {
         <img alt="img1" src="https://thumbs.dreamstime.com/b/text-shop-local-colored-wooden-letters-wooden-background-text-shop-local-colored-wooden-letters-109540951.jpg" />
       </Slide>
     </ImageSlider>
-    </div>
+    </div> */}
    
     
 

@@ -1,22 +1,22 @@
-import { ALL_SHOP_FAIL, ALL_SHOP_REQUEST, ALL_SHOP_SUCCESS,CLEAR_ERRORS } from "../constants/shopConstants";
+import { ALL_ITEM_FAIL, ALL_ITEM_REQUEST, ALL_ITEM_SUCCESS,CLEAR_ERRORS } from "../constants/itemConstants";
 
-export const shopReducer=(state={shops:[]},action)=>
+export const itemReducer=(state={items:[]},action)=>
 {
     switch(action.type)
     {
-        case ALL_SHOP_REQUEST:
+        case ALL_ITEM_REQUEST:
             return{
                 loading:true,
-               shops:[]
+               items:[]
 
             };
-            case ALL_SHOP_SUCCESS:
+            case ALL_ITEM_SUCCESS:
                 return{
                     loading:false,
-                   shops:action.payload.shops,
+                   items:action.payload.items,
               
                 };
-            case ALL_SHOP_FAIL:
+            case ALL_ITEM_FAIL:
                 return{
                     loading:false,
                     error:action.payload

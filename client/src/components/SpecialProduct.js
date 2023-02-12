@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactStars from "react-rating-stars-component";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getShop } from "../actions/shopActions";
 const SpecialProduct = () => {
+  // const product={
+  //   name:"Kirti's Shop",
+  //   category:"Clothes",
+  //   location:"Delhi"
+  // }
+  const dispatch=useDispatch();
+  const{shops,loading,error}=useSelector(state=>state.shops);
+  useEffect(()=>
+  {
+  
+    dispatch(getShop())
+  },[dispatch])
   return (
+   
+
     <>
-      <div className="col-6 mb-3">
-        <div className="special-product-card">
+    <div className="row">
+       
+        {/*<div className="special-product-card">
           <div className="d-flex justify-content-between">
             <div classname="prod-image">
               <img src="https://www.resizepixel.com/Image/j5x0h5l1oz/Preview/Screenshot_20230211_093344.png?v=45aaa1a6-b29f-449c-b16b-0afdc5121fb3" className="img-fluid" alt="watch" />
@@ -45,7 +62,7 @@ const SpecialProduct = () => {
           </div>
         </div>
         
-        {/* second */}
+       
          
         <div className="special-product-card">
           <div className="d-flex justify-content-between">
@@ -126,10 +143,12 @@ const SpecialProduct = () => {
             </div>
           </div>
         </div>
-        
+         */}
         {/* second */}
-         
-        <div className="special-product-card">
+         {shops &&
+         shops.map(shop=>(
+          <div className="col-6 mb-3">
+          <div className="special-product-card">
           <div className="d-flex justify-content-between">
             <div className="prod-image">
               <img src="https://c.ndtvimg.com/2019-05/j82aj5m_vegan-baking_650x400_20_May_19.jpg" className="img-fluid" alt="watch" />
@@ -137,7 +156,7 @@ const SpecialProduct = () => {
             <div className="special-product-content">
               <h5 className="brand"></h5>
               <h6 className="title">
-               Muskan's Bakery
+               {shop.name}
               </h6>
               <ReactStars
                 count={5}
@@ -151,8 +170,9 @@ const SpecialProduct = () => {
                 
               </div>
               <div className="prod-count my-3">
-                <p>Products: 90+</p>
-                <div className="progress">
+                <p>{shop.category}</p>
+                {/* <p>{shop.location}</p> */}
+                {/* <div className="progress">
                   <div
                     className="progress-bar"
                     role="progressbar"
@@ -161,13 +181,17 @@ const SpecialProduct = () => {
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
-                </div>
+                </div> */}
               </div>
-              <Link className="button">View Shop</Link>
+           <Link to={`/items/${shop._id}`} className="button">View Shop</Link>
             </div>
           </div>
         </div>
+        </div> 
+         ))}
+       
         
+    
       </div>
     </>
   );

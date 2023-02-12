@@ -1,24 +1,27 @@
-import { ALL_SHOP_FAIL, ALL_SHOP_REQUEST, ALL_SHOP_SUCCESS,CLEAR_ERRORS } from "../constants/shopConstants";
-
-export const shopReducer=(state={shops:[]},action)=>
+import { LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS,CLEAR_ERRORS } from "../constants/userConstants";
+export const userReducer=(state={user:{}},action)=>
 {
     switch(action.type)
     {
-        case ALL_SHOP_REQUEST:
+        case LOGIN_REQUEST:
             return{
                 loading:true,
-               shops:[]
+                isAuthenticated:false,
+          
 
             };
-            case ALL_SHOP_SUCCESS:
+            case LOGIN_SUCCESS:
                 return{
                     loading:false,
-                   shops:action.payload.shops,
+                    isAuthenticated:true,
+                    user:action.payload.user,
               
                 };
-            case ALL_SHOP_FAIL:
+            case LOGIN_FAIL:
                 return{
                     loading:false,
+                    isAuthenticated:false,
+                    user:null,
                     error:action.payload
 
                 }
