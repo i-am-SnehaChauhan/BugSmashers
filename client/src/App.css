@@ -57,6 +57,7 @@ a {
   font-size: 14px;
   padding: 13px 33px;
   border-radius: 25px;
+  /* text-align: center; */
 }
 .button:hover {
   background-color: #febd69;

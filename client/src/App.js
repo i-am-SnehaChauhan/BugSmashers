@@ -27,9 +27,15 @@ import TermAndCondition from "./pages/TermAndCondition";
 import SingleProduct from "./pages/SingleProduct";
 import Checkout from "./pages/Checkout";
 import openStore from "./pages/OpenStore";
+<<<<<<< HEAD
 import SubLogin from "./SubLogin";
 import SpecialProduct from "./components/SpecialProduct";
 import Landing from "./pages/Landing";
+=======
+import SubLogin from "./pages/SubLogin";
+import CreateStore from "./pages/CreateStore";
+
+>>>>>>> c33e0628363f315a03f242d62c3406d05598737a
 function App() {
   return (
     <>
@@ -56,6 +62,7 @@ function App() {
            
             <Route path="forgot-password" element={<Forgotpassword />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="createStore" element={<CreateStore/>} />
             <Route path="reset-password" element={<Resetpassword />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="refund-policy" element={<RefundPolicy />} />
