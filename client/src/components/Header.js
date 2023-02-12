@@ -2,11 +2,11 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import compare from "../images/compare.svg";
-import wishlist from "../images/wishlist.svg";
-import user from "../images/user.svg";
-import cart from "../images/cart.svg";
-import menu from "../images/menu.svg";
+import wishlist1 from "../images/7.heart.png";
+import user from "../images/8.account.png";
 import search from "../images/1.search.png";
+import Login from "../images/6.log-in.png";
+import help from "../images/5.help.png";
 const Header = () => {
   return (
     <>
@@ -102,9 +102,9 @@ const Header = () => {
                     to="/compare-product"
                     className="d-flex align-items-center gap-10 text-dark "
                   >
-                    <img src={compare} alt="compare" />
+                    <img src={user} alt="Account" width={40}/>
                     <p className="mb-0">
-                      Compare <br /> Products
+                      My Account
                     </p>
                   </Link>
                 </div>
@@ -113,9 +113,9 @@ const Header = () => {
                     to="/wishlist"
                     className="d-flex align-items-center gap-10 text-dark"
                   >
-                    <img src={wishlist} alt="wishlist" />
+                    <img src={wishlist1} alt="wishlist" width={40}/>
                     <p className="mb-0">
-                      Favourite <br /> wishlist
+                      Favourite 
                     </p>
                   </Link>
                 </div>
@@ -124,24 +124,21 @@ const Header = () => {
                     to="/login"
                     className="d-flex align-items-center gap-10 text-dark"
                   >
-                    <img src={user} alt="user" />
+                    <img src={Login} alt="Login"  width={40}/>
                     <p className="mb-0">
-                      Log in <br /> My Account
+                      Log in
                     </p>
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    to="/cart"
-                    className="d-flex align-items-center gap-10 text-dark"
-                  >
-                    <img src={cart} alt="cart" />
+                  
+                   
+                    <img src={help} alt="help"  width={40}/>
                     <div className="d-flex flex-column gap-10">
-                      <span className="badge bg-white text-dark">0</span>
-                      <p className="mb-0">Rs 500</p>
+                      <p className="mb-0">Help</p>
                     </div>
-                  </Link>
-                </div>
+                  
+          </div>
               </div>
             </div>
           </div>
